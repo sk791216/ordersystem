@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8"> 
+   <link rel="stylesheet" href="themes/ordersystem.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <style>
+            .Select_store{
+                position:35px;
+                background-color:#FF6600;
+                color:white;
+                font-family:微軟正黑體;
+                font-weight:bold;
+                font-size:50px;
+                cursor:pointer;
+                text-align:center;
+                height:100px;
+                width:150px;
+                line-height:70px;
+                
+            }
+            .order_store:hover{
+                    background-color:#4d4949;
+                }
+                .subthing{
+                    cursor:pointer;
+                    background-color:#4d4949;
+                    color:white;
+                    font-family:微軟正黑體;
+                    font-size:24px;
+                    text-align:center;
+                    font-weight:bold;
+                    width:150px;
+                }
+                .subthing li{
+                    list-style-type:none;
+                    font-size:20px;
+                    height:40px;				
+                    line-height:20px;
+                }
+                .item{
+                    float:left;
+                }
+        </style>
+          <script>		
+			$(document).ready(function(){       
+					$(".subthing").slideUp(0)
+						$(".Select_store").mouseover(function(){
+							$(".subthing").slideToggle()                   
+						})
+						$(".Select_store").mouseout(function(){
+							$(".subthing:not").slideUp()     
+						})            
+					$("#store").css("width",$(".Select_store").length*100)
+				})
+			</script>
+</head>
+<body>
+<!------------------第一頁------------------------------>
+<div data-role="page" id="order_store" style="background:url(C:/Apache24/htdocs/images/background1.jpg) no-repeat;background-size:cover">
+	<div data-role="head">
+        <title>餐廳選擇</title>
+
+  	</div>
+	<div data-role="body">    
+        <div id="store">
+            <div class="item">        
+                <div class="Select_store">餐廳</div>
+                <div class="subthing">
+                    <ul>
+                        <!--accesskey 快捷鍵設定 alt+accesskey或shift+alt+accesskey-->
+                        <li><a href="#order_store1" accesskey="1" title="" data-ajax="false">古月</a></li>
+                        <li>池上</li>
+                        <li>大苑子</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+	</div>
+</div>
+<!---------------------第二頁-------------------------------------->
+<div data-role="page" id="order_page1" style="background:url(C:/Apache24/htdocs/images/background1.jpg) no-repeat;background-size:cover">
+    <div data-role="head" title="古月"></div>	 
+	<div data-role="body">    
+        <div id="store">
+            <div class="item">        
+                <div class="Select_store">餐廳</div>
+                <div class="subthing">
+                    <ul>
+                        <!--accesskey 快捷鍵設定 alt+accesskey或shift+alt+accesskey-->
+                        <!--設置迴圈-->
+                        <li><a href="#order_store1" accesskey="1" title="" data-ajax="false">古月</a></li>
+                        <li><a href="#order_store" accesskey="2" title="" data-ajax="false">穿山甲</a></li>
+                        <li><a href="#order_store" accesskey="3" title="" data-ajax="false">池上</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+	
+	</div>
+</div>
+</body>
+</html>

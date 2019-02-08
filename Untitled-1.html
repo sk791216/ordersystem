@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>無標題文件</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+    $(document).ready(function () {
+        //要寫程式的地方
+        //這個功能是點擊含有 close class 的元素之後"隱藏/顯示"含有 service class 的元素
+        $(".close").click(function () {
+            $(".service").fadeToggle()
+        })
+    })
+</script>
+<style>
+    /*樣式設定的部分就先跳過，有興趣或疑問可以留言討論*/
+    .box {
+        width: 100px;
+        height: auto;
+        position: relative;
+        font-family: "微軟正黑體";
+        margin: 50px;
+        text-align: center;
+    }
+    .service {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background: lightblue;
+        cursor: default;
+    }
+    .service p {
+        line-height: 100px;
+    }
+    .close {
+        position: absolute;
+        top: -20px;
+        right: -24px;
+        color: lightblue;
+        font-weight: bold;
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+        border: 1px solid;
+        border-radius: 20px;
+        line-height: 16px;
+        cursor: pointer;
+    }
+</style>
+<div class="box">
+    <div class="close">
+        <span> x </span>
+    </div>
+    <div class="service">
+        <p> 聯絡客服 </p>
+    </div>
+</div>
+</head>
+
+<body>
+</body>
+</html>

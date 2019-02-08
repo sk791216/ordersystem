@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+
+
+<head>
+
+	<meta charset="utf-8">
+      <link rel="stylesheet" href="themes/ordersystem.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<title>古月</title>
+
+	<style>
+		body{
+
+		}
+		.Select_store{
+			position:35px;
+			background-color:#A9A9A9;
+			color:white;
+			font-family:微軟正黑體;
+			font-weight:bold;
+			font-size:50px;
+			cursor:pointer;
+			text-align:center;
+			height:100px;
+			width:150px;
+			line-height:70px;
+			
+		}
+		.order_store:hover{
+				background-color:#4d4949;
+			}
+			.subthing{
+				cursor:pointer;
+				background-color:#4d4949;
+				color:white;
+				font-family:微軟正黑體;
+				text-align:center;
+				font-weight:bold;
+				width:150px;
+			}
+			.subthing li{
+				list-style-type:none;
+				font-size:20px;
+				height:40px;				
+				line-height:35px;
+			}
+			.item{
+				float:left;
+			}
+	</style>
+   	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>		
+	$(document).ready(function(){
+            
+
+            $(".subthing").slideUp(0)
+                $(".Select_store").mouseover(function(){
+                    $(".subthing").slideToggle()                   
+                })
+                $(".Select_store").mouseout(function(){
+					$(".subthing:not").slideUp()     
+				})            
+            $("#store").css("width",$(".Select_store").length*100)
+        })
+	</script>
+
+<div id="store">
+        <div class="item">        
+            <div class="Select_store">餐廳</div>
+            <div class="subthing">
+                <ul>
+                    <li>古月</li>
+                    <li>池上</li>
+                    <li>大苑子</li>
+                </ul>
+            </div>
+        </div>
+
+	</div>
+</head>
+
+<body>
+	<div id="order_store">
+    	<div class="store_name">
+    </div>
+
+</body>
+</html>
